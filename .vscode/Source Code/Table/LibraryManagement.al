@@ -14,7 +14,7 @@ table 50201 "Library Management Table"
         field(2; "Symbol No"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Sales & Receivables Setup";
+            Editable = false;
 
         }
 
@@ -31,6 +31,7 @@ table 50201 "Library Management Table"
         field(5; "Code"; Code[20])
         {
             DataClassification = ToBeClassified;
+            TableRelation = "No. Series";
         }
     }
 
@@ -50,8 +51,8 @@ table 50201 "Library Management Table"
     begin
         if Name = ' ' then begin
             tab.Get();
-            mang.InitSeries(tab."Order Nos.", tab."Order Nos.", 0D, "Symbol No", Code);
-        end;
+            mang.InitSeries(tab."Customer Nos.", tab."Customer Nos.", 0D, "Symbol No", "Code");
+        end
     end;
 
 

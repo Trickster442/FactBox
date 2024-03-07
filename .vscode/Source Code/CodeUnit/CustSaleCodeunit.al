@@ -9,4 +9,5 @@ codeunit 50183 "Customer and Sales Codeunit"
             rec."External Document No." := Cust."External No";
 
     end;
+    
 }
