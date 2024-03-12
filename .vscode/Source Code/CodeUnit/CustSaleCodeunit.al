@@ -9,5 +9,13 @@ codeunit 50183 "Customer and Sales Codeunit"
             rec."External Document No." := Cust."External No";
 
     end;
-    
+
+    [EventSubscriber(ObjectType::Table, Database::Customer, 'OnAfterValidateEvent', 'Bill-to Customer No.', false, false)]
+    local procedure "Bill-to Customer No."(CurrFieldNo: Integer; var xRec: Record Customer; var Rec: Record Customer)
+    var
+        cod: Record Item;
+    begin
+        if cod.Get(Rec."Bill-to Customer No.") then
+            rec."No." := cod.UniqCode;
+    end;
 }
