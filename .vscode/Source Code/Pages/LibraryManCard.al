@@ -32,10 +32,10 @@ page 50212 "Library Management Card"
                 }
 
             }
-            part("Library Line"; "Library Management List Line")
-            {
-                SubPageLink = Code = field("Symbol No");
-            }
+            // part("Library Line"; "Library Management List Line")
+            // {
+            //     SubPageLink = Code = field("Symbol No");
+            // }
         }
            
     }

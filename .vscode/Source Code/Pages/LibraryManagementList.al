@@ -5,35 +5,37 @@ page 50210 "Library Management List"
     UsageCategory = Lists;
     SourceTable = "Library Management Table";
     CardPageId = "Library Management Card";
-    
+
     layout
     {
         area(Content)
         {
-        repeater(groups)
+            repeater(groups)
             {
-                field("S.N";Rec."S.N")
+                field("S.N"; Rec."S.N")
                 {
                     ApplicationArea = All;
-                    
+
                 }
-                field("Symbol No";Rec."Symbol No"){
-                    ApplicationArea = All ;
+                field("Symbol No"; Rec."Symbol No")
+                {
+                    ApplicationArea = All;
 
                 }
 
-                field(Name;Rec.Name)
+                field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Age;Rec.Age){
+                field(Age; Rec.Age)
+                {
                     ApplicationArea = All;
                 }
             }
         }
     }
-    
+
     actions
     {
         area(Processing)
@@ -41,15 +43,15 @@ page 50210 "Library Management List"
             action(ActionName)
             {
                 ApplicationArea = All;
-                
+
                 trigger OnAction()
                 begin
-                    
+
                 end;
             }
         }
     }
-    
+
     var
         myInt: Integer;
 }

@@ -7,15 +7,12 @@ table 50201 "Library Management Table"
         field(1; "S.N"; Integer)
         {
             DataClassification = ToBeClassified;
-            AutoIncrement = true;
             Editable = false;
         }
 
         field(2; "Symbol No"; Code[20])
         {
             DataClassification = ToBeClassified;
-            Editable = false;
-
         }
 
         field(3; "Name"; Text[50])
@@ -28,16 +25,17 @@ table 50201 "Library Management Table"
             DataClassification = ToBeClassified;
         }
 
-        field(5; "Code"; Code[20])
+        field(5; "Syn"; Code[20])
         {
             DataClassification = ToBeClassified;
+            Caption = 'Syn';
             TableRelation = "No. Series";
         }
     }
 
     keys
     {
-        key(Pk; "Symbol No")
+        key(Key1; "Symbol No", "Syn")
         {
             Clustered = true;
         }
@@ -49,9 +47,9 @@ table 50201 "Library Management Table"
 
     trigger OnInsert()
     begin
-        if Name = ' ' then begin
+        if rec."Symbol No" = '' then begin
             tab.Get();
-            mang.InitSeries(tab."Customer Nos.", tab."Customer Nos.", 0D, "Symbol No", "Code");
+            mang.InitSeries(tab."LibMan", tab."LibMan", 0D, "Symbol No", "Syn");
         end
     end;
 

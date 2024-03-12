@@ -1,63 +1,63 @@
-table 50202 "Library Management Table line"
-{
-    DataClassification = ToBeClassified;
+// table 50202 "Library Management Table line"
+// {
+//     DataClassification = ToBeClassified;
 
-    fields
-    {
-        field(1; "S.N"; Integer)
-        {
-            DataClassification = ToBeClassified;
-            AutoIncrement = true;
-            Editable = false;
-        }
+//     fields
+//     {
+//         field(1; "S.N"; Integer)
+//         {
+//             DataClassification = ToBeClassified;
+//             AutoIncrement = true;
+//             Editable = false;
+//         }
 
-        field(3; "Code"; Code[20])
-        {
-            DataClassification = ToBeClassified;
-            TableRelation = "Library Management Table";
-        }
+//         field(3; "Code"; Code[20])
+//         {
+//             DataClassification = ToBeClassified;
+//             TableRelation = "Library Management Table";
+//         }
 
-        field(2; "Date"; Date)
-        {
-            DataClassification = ToBeClassified;
-        }
+//         field(2; "Date"; Date)
+//         {
+//             DataClassification = ToBeClassified;
+//         }
 
-    }
+//     }
 
-    keys
-    {
-        key(Key1; "Code", "S.N")
-        {
-            Clustered = true;
-        }
-    }
+//     keys
+//     {
+//         key(Key1; "Code", "S.N")
+//         {
+//             Clustered = true;
+//         }
+//     }
 
-    fieldgroups
-    {
-        // Add changes to field groups here
-    }
+//     fieldgroups
+//     {
+//         // Add changes to field groups here
+//     }
 
-    var
-        myInt: Integer;
+//     var
+//         myInt: Integer;
 
-    trigger OnInsert()
-    begin
+//     trigger OnInsert()
+//     begin
 
-    end;
+//     end;
 
-    trigger OnModify()
-    begin
+//     trigger OnModify()
+//     begin
 
-    end;
+//     end;
 
-    trigger OnDelete()
-    begin
+//     trigger OnDelete()
+//     begin
 
-    end;
+//     end;
 
-    trigger OnRename()
-    begin
+//     trigger OnRename()
+//     begin
 
-    end;
+//     end;
 
-}
+// }
