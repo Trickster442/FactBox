@@ -1,44 +1,36 @@
-page 50212 "Library Management Card"
+page 50233 "Library Management List Line"
 {
-    PageType = Card;
-    SourceTable = "Library Management Table";
+    PageType = ListPart;
+    SourceTable = "Library Management Line";
 
     layout
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(group)
             {
-                field("S.N"; Rec."S.N")
-                {
-                    ApplicationArea = All;
-
-                }
-
                 field("Symbol No"; Rec."Symbol No")
                 {
                     ApplicationArea = All;
 
                 }
 
-                field(Name; Rec.Name)
+                field(AccountNo; Rec.AccountNo)
                 {
                     ApplicationArea = All;
                 }
 
-                field(Age; Rec.Age)
+                field(Date; Rec.Date)
                 {
                     ApplicationArea = All;
                 }
-            }
 
-            part("Library Management List Line"; "Library Management List Line")
-            {
-                SubPageLink = "Symbol No" = field("Symbol No");
-                ApplicationArea = All;
+                field(Time; Rec.Time)
+                {
+                    ApplicationArea = All;
+                }
             }
         }
-
     }
 
     actions
