@@ -36,7 +36,6 @@ pageextension 50260 "Filter" extends "Item List"
                 begin
                     Rec.SetRange("Unit Price", 5000, 15000);
                 end;
-
             }
 
         }
